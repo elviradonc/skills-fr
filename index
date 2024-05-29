@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elvira Matas Doncel CV</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #272a5d;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            animation: fadeInDown 1s ease;
+        }
+      
+        .bottom-section {
+            background-color: #f4f4f4;
+            padding: 50px 20px;
+            text-align: center;
+            animation: fadeInLeft 1s ease;
+        }
+        .profile-card {
+            background-color: #fff;
+            padding: 20px;
+            max-width: 500px;
+            margin: 20px auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            animation: fadeInRight 1s ease;
+        }
+        .profile-card img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            margin-bottom: 20px;
+        }
+        .profile-card h2 {
+            margin: 10px 0 5px 0;
+        }
+        .profile-card p {
+            margin: 5px 0;
+            color: #272a5d;
+        }
+        .social-icons a {
+            margin: 0 5px;
+            display: inline-block;
+            animation: bounce 1s infinite;
+        }
+        .flags {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+        .flags img {
+            width: 30px;
+            height: 20px;
+            margin: 0 10px;
+            cursor: pointer;
+        }
+        .social-icons img {
+            width: 30px;
+            height: 30px;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 20px;
+            max-width: 1200px;
+            width: 100%;
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .left {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .left h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        .left p {
+            margin-bottom: 40px;
+        }
+        .left img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .right {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        .box {
+            background-color: #e0e0e0;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .box:nth-child(4) {
+            background-color: #4d5088;
+        }
+        .box h2 {
+            margin-top: 0;
+        }
+        .box p {
+            margin-bottom: 20px;
+        }
+        .box a {
+            color: #000;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        @keyframes fadeInDown {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeInLeft {
+            0% {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        @keyframes fadeInRight {
+            0% {
+                opacity: 0;
+                transform: translateX(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+        .email-container {
+            display: none;
+            margin-top: 20px;
+            color: #272a5d;
+        }
+        .show-email {
+            background-color: #272a5d;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        /* Menu Hamburguesa */
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            margin-left: 20px;
+        }
+        .bar {
+            width: 25px;
+            height: 3px;
+            background-color: #fff;
+            margin: 4px 0;
+            transition: all 0.3s ease;
+        }
+        .nav {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: flex-end;
+        }
+        .nav li {
+            margin: 0 20px;
+        }
+        .nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: flex;
+            }
+            .nav {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+            }
+            .nav.active {
+                display: flex;
+            }
+            .nav li {
+                margin: 15px 0;
+                text-align: center;
+            }
+        }
+        h1 {
+            font-size: 36px;
+            text-align: center;
+            color: #333;
+        }
+        p {
+            text-align: center;
+            color: #666;
+            margin-bottom: 40px;
+        }
+        .skills-section {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+        .skills-description {
+            width: 30%;
+        }
+        .skill-item {
+            display: flex;
+            margin-bottom: 20px;
+        }
+        .icon {
+            font-size: 30px;
+            margin-right: 10px;
+        }
+        .design-icon::before {
+            content: '🤖';
+        }
+        .tech-icon::before {
+            content: '💬';
+        }
+        .responsive-icon::before {
+            content: '💬';
+        }
+        .skill-item h2 {
+            margin: 0;
+            font-size: 20px;
+            color: #333;
+        }
+        .skill-item p {
+            margin: 5px 0 0 0;
+            color: #666;
+        }
+        .skills-bars {
+            width: 60%;
+        }
+        .skill-bar {
+            margin-bottom: 20px;
+        }
+        .skill-title {
+            font-size: 18px;
+            margin-bottom: 5px;
+            color: #333;
+        }
+        .progress {
+            background-color: #e0e0e0;
+            border-radius: 4px;
+            overflow: hidden;
+            position: relative;
+        }
+        .progress-bar {
+            height: 25px;
+            line-height: 25px;
+            color: white;
+            text-align: right;
+            padding-right: 10px;
+            border-radius: 4px;
+            width: 0;
+            animation: loadSkill 2s forwards;
+        }
+        .html {
+            background-color: #f16529;
+        }
+        .css {
+            background-color: #2965f1;
+        }
+        .jquery {
+            background-color: #0769ad;
+        }
+        .php {
+            background-color: #4F5B93;
+        }
+        .wordpress {
+            background-color: #21759b;
+        }
+        .seo {
+            background-color: #28a745;
+        }
+        .photoshop {
+            background-color: #31a8ff;
+        }
+        @keyframes loadSkill {
+            0% {
+                width: 0;
+            }
+            100% {
+                width: var(--width);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+       
+        <nav>
+            <ul class="nav" id="nav-list">
+                <li><a href="#home">Accueil</a></li>
+                <li><a href="#about">À propos de moi</a></li>
+                <li><a href="#services">Experience</a></li>
+                <li><a href="#contact">Compétences</a></li>
+                <div class="flags">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/c/c3/Flag_of_France.svg/255px-Flag_of_France.svg.png" alt="Français" title="Français">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Flag_of_the_United_Kingdom_%281-2%29.svg/640px-Flag_of_the_United_Kingdom_%281-2%29.svg.png" alt="English" title="English">
+                </div>
+            </ul>
+        </nav>
+    </header>
+   
+    <div class="container">
+        <div class="left" id="about">
+            <h1>Elvira Matas Doncel</h1>
+            <p>Dans cette partie je vais développer mes compétences linguistiques, techniques en langages naturels et de programmation ainsi que en matière de communication et marketing</p>
+            <img src="https://media.licdn.com/dms/image/D5603AQFTSFqDchgKBw/profile-displayphoto-shrink_800_800/0/1699988173000?e=2147483647&v=beta&t=fFI6uhb6aNfFGzfuskDgJCZaVAF7SZOafvXfKUb-k_4" alt="Profile Image">
+        </div>
+        <div class="right">
+            <div class="box" id="services">
+                <h2>Linguistique</h2>
+                <p>Au sein de mon diplôme en lettres modernes et sciences du langage</p>
+                <ul>
+                    <li>Phonétique et phonologie</li>
+                    <li>Morphologie et syntaxe</li>
+                    <li>Sémantique et pragmatique</li>
+                    <li>Langues et sociétés</li>
+                    <li>Acquisition et apprentissage des langues</li>
+                    <li>Traduction et interprétation</li>
+                </ul>
+            </div>
+            <div class="box">
+                <h2>Programmation</h2>
+                <p>Au sein du master CAWEB et mes stages </p>
+                <ul>
+                    <li>Développement Front-End: HTML, CSS, JavaScript, jQuery</li>
+                    <li>CMS: WordPress </li>
+                    <li>SEO: Optimisation pour les moteurs de recherche</li>
+                    
+                </ul>
+             
+            </div>
+            <div class="box" id="contact">
+                <h2>Communication</h2>
+                <p>Au sein du master CAWEB </p>
+                <ul>
+                    <li>Écoute active et empathie</li>
+                    <li>Rédaction et édition de contenu</li>
+                    <li>Gestion des relations publiques</li>
+                    <li>Stratégies de communication digitale</li>
+                    <li>Création de présentations </li>
+                    <li>Logiciels : Microsoft Office (Word, Excel, PowerPoint), Adobe Creative Suite</li>
+            
+                </ul>
+                
+            </div>
+            <div class="box">
+                <h2>IA</h2>
+                <p>Au sein de mes stages en télécommunications </p>
+                <ul>
+                    <li>Traitement du langage naturel (NLP)</li>
+                    <li>Analyse des données </li>
+                    <li>Conception d'algorithmes d'apprentissage automatique</li>
+                    <li>Vision par ordinateur et reconnaissance d'images</li>
+                    <li>Logiciels : TensorFlow, Dialogflow, PyTorch, Vertex</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <div class="skills-section">
+        <div class="skills-description">
+            <div class="skill-item">
+                <i class="icon design-icon"></i>
+                <div>
+                    <h2>Design et dev </h2>
+                    <ul>
+                        <li>Conception de sites web esthétiques et fonctionnels</li>
+                        <li>Logiciels et Technologies : Adobe Creative Suite, Sketch, Figma, HTML5, CSS3, JavaScript, React, Node.js, Bootstrap</li>
+                        <li>Mise en œuvre de designs réactifs pour une accessibilité maximale</li>
+                        <li>Développement front-end et back-end</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="skill-item">
+                <i class="icon tech-icon"></i>
+                <div>
+                    <h2>Linguistique</h2>
+                    <ul>
+                        <li>Analyse contextuel et critique</li>
+                        <li>Sémantique et sémiotique</li>
+                        <li>Création et analyse de datasets </li>
+                        <li>Français-Espagnol-Anglais</li>
+                    </ul>
+                </div>
+            </div>
+            
+        </div>
+        <div class="skills-bars">
+            <div class="skill-bar">
+                <span class="skill-title">HTML5</span>
+                <div class="progress">
+                    <div class="progress-bar html" style="--width: 60%;">60%</div>
+                </div>
+            </div>
+            <div class="skill-bar">
+                <span class="skill-title">CSS</span>
+                <div class="progress">
+                    <div class="progress-bar css" style="--width: 80%;">80%</div>
+                </div>
+            </div>
+            <div class="skill-bar">
+                <span class="skill-title">Cloud ASR</span>
+                <div class="progress">
+                    <div class="progress-bar jquery" style="--width: 80%;">80%</div>
+                </div>
+            </div>
+            <div class="skill-bar">
+                <span class="skill-title">NLU</span>
+                <div class="progress">
+                    <div class="progress-bar php" style="--width: 80%;">80%</div>
+                </div>
+            </div>
+            <div class="skill-bar">
+                <span class="skill-title">Langues étrangères</span>
+                <div class="progress">
+                    <div class="progress-bar wordpress" style="--width: 65%;">65%</div>
+                </div>
+            </div>
+            <div class="skill-bar">
+                <span class="skill-title">SEO</span>
+                <div class="progress">
+                    <div class="progress-bar seo" style="--width: 40%;">40%</div>
+                </div>
+            </div>
+            <div class="skill-bar">
+                <span class="skill-title">Photoshop</span>
+                <div class="progress">
+                    <div class="progress-bar photoshop" style="--width: 20%;">20%</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="bg-white py-6">
+        <div class="container mx-auto px-6 text-center">
+            <div class="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-4">
+                <p class="text-gray-600 text-sm font-semibold">Elvira Matas Doncel</p>
+            </div>
+            <div class="mt-6">
+                <p class="text-gray-600 text-sm font-semibold">&copy; 2024 CAWEB EàD All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        function showEmail(event) {
+            event.preventDefault();
+            var emailContainer = document.getElementById('email-container');
+            emailContainer.style.display = 'block';
+        }
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuToggle = document.getElementById('mobile-menu');
+            const navList = document.getElementById('nav-list');
+            menuToggle.addEventListener('click', () => {
+                navList.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>
